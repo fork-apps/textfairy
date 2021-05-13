@@ -34,7 +34,7 @@ data class OcrLanguage(
         val uri = if (value == "sat") {
             Uri.parse("https://github.com/indic-ocr/tessdata/raw/master/sat/sat.traineddata")
         } else {
-            Uri.parse("https://github.com/tesseract-ocr/tessdata_fast/raw/4.0.0/$value.traineddata")
+            Uri.parse("https://github.com/tesseract-ocr/tessdata_best/raw/4.0.0/$value.traineddata")
         }
         val request = DownloadManager.Request(uri)
         setTrainedDataDestinationForDownload(context, request, uri.lastPathSegment!!)
